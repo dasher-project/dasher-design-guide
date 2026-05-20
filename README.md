@@ -8,6 +8,38 @@
 
 ---
 
+## About This Repository
+
+This is the **living design guide** for Dasher v6.0. It contains two documents:
+
+- **README.md** (this file) — Human-readable design guidelines, rationale, and interaction specifications. Start here.
+- **[DESIGN.md](DESIGN.md)** — Machine-readable design tokens following the [Google DESIGN.md spec](https://github.com/google/design.md). Use this for automated linting, cross-platform token validation, and as a single source of truth for coding agents.
+
+### Keeping This Guide Up to Date
+
+Design decisions evolve. When a change is agreed upon:
+
+1. Update **DESIGN.md** tokens first (the normative source of truth for colors, typography, spacing, etc.).
+2. Update this **README.md** to reflect the rationale and visual reference for that change.
+3. Validate with `npx @google/design.md lint DESIGN.md` — zero errors before committing.
+
+Platform-specific deviations (see below) should be documented in each platform's repository, not here. This guide stays canonical.
+
+### Cross-Platform Architecture
+
+Dasher v6.0 is not a single-platform app. Multiple native frontends connect to a shared **DasherCore** backend:
+
+| Platform | UI Framework | Notes |
+| :--- | :--- | :--- |
+| **Web / Electron** | CSS / Tailwind | Reference implementation. See Section 9 for CSS variables. |
+| **macOS / iOS** | SwiftUI | Map design tokens to Swift Color/Font extensions. |
+| **Windows / Linux desktop** | Avalonia (XAML) | Use `SolidColorBrush` resources mapped to hex tokens. |
+| **Linux (GNOME)** | GTK | Use CSS theming or `Gtk.CssProvider` with token values. |
+
+Platform-specific adaptations are expected and allowed — a SwiftUI `Toggle` or a GTK `Switch` will not look identical, and that is fine. What must remain consistent across all platforms are the **color values, typographic scale, spacing, touch-target sizes, and interaction patterns** defined in this guide and codified in DESIGN.md.
+
+---
+
 ## 1. Introduction & Product Vision
 
 Dasher is a predictive, continuous-gesture text-entry system driven by zooming mechanics. Originally built as an accessibility aid for users with severe motor restrictions (utilizing eye-gaze, head-trackers, sip-and-puff devices, or joysticks), **Dasher v6.0** represents a complete cross-platform modernization.
@@ -186,9 +218,9 @@ At the end of a training sequence, display a clean, high-affirmation progress sh
 
 ![Game Mode Slide](assets/design-elements/game-mode-slide.png)
 
-## 9. Code Implementation Guide (UI Framework Standards)
+## 9. Code Implementation Guide (Web Reference)
 
-For developers implementing components in CSS / Tailwind:
+The following CSS variables serve as a **reference implementation** for the Web/Electron frontend. Other platforms should map these same tokens to their native equivalents (SwiftUI `Color` extensions, Avalonia `SolidColorBrush` resources, GTK CSS, etc.).
 
 ```css
 /* Dasher Design System CSS Variables */
@@ -231,4 +263,4 @@ For developers implementing components in CSS / Tailwind:
 
 ---
 
-For the machine-readable design token specification, see [DESIGN.md](DESIGN.md).
+For the machine-readable design token specification used by coding agents and linting tools, see [DESIGN.md](DESIGN.md). When in doubt, DESIGN.md tokens are the normative values — this README provides the human context for why those values exist.

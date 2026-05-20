@@ -226,15 +226,15 @@ We have completely reorganized the confusing legacy Windows preferences tabs. Us
 
 ### Clean Re-Categorization
 
-The settings tab-structure is grouped by **usage context** rather than content:
+The settings tab-structure is grouped by **usage context** rather than content. Parameters are defined in `settings_manifest.json` with `group` and `subgroup` fields, so the UI renders dynamically from the engine schema.
 
 ![Settings Menu](assets/design-elements/slide-settings.png)
 
-1. **Customization:** Themes, editor font size, layout alignments, application styling (Standalone vs. Composition vs. Direct Entry).
-2. **Punctuation:** Capitalization filters, basic punctuation, numeral inclusion.
-3. **Volume:** Text-to-speech engine selection, system alert volume, typing confirmation ticks.
-4. **Locks:** Cursor constraints, pausing thresholds, stop-on-canvas-exit toggle.
-5. **Accessibility (Key Tab):** Input device profiles (Eye-tracker, Mouse, Joystick), zoom thresholds, hover adjustments.
+1. **Customization (18 params):** Colour themes, Dasher canvas font, message font size, node shape, outline width, text padding, margin width, layout orientation, screen geometry, mouse line overlay, transparency simulation. Subgroups: *Themes*, *Appearance*, *Layout*, *Mouse Line*.
+2. **Input (63 params):** Input device and filter selection, per-mode tuning (Normal Control, Press, Smoothing, Stylus, Click, Button, Compass, Socket, Demo). Pointer hover / eye gaze settings on iOS/visionOS. Start/stop triggers, slow start, auto-speed, calibration. Subgroups: *Control*, *CDefaultFilter*, *CDynamicFilter*, *CSmoothingFilter*, *CStylusFilter*, *CButtonMode*, *CTwoButtonDynamicFilter*, *CStaticFilter*, *CSocket*, *CDemoFilter*, *Advanced*. Only subgroups matching the active input filter are shown (contextual filtering).
+3. **Language (14 params):** Alphabet selection, adaptive language model toggle, LM order (n-gram), alphabet history. Subgroups: *Learning*, *History*, *Advanced* (LM alpha/beta/mixture/exclusion).
+4. **Output (7 params):** Speed (max bitrate), framerate, speech on-stop and per-word, copy on stop, message display time, log level. Subgroups: *Speed*, *Speech*, *Clipboard*, *Display*, *Logging*.
+5. **Game Mode (4 params):** Training path overlay, help distance and time, game text file selection. Subgroups: *Help*.
 
 ### Contextual Help & Mode Wizard
 

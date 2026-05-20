@@ -160,7 +160,7 @@ reduce eye fatigue during extended use.
 | Token       | Size    | Weight     | Use                                    |
 | :---------- | :------ | :--------- | :------------------------------------- |
 | `h1`        | 1.5rem  | Semi-Bold  | Settings / onboarding headings         |
-| `h2`        | 1.25rem | Medium     | Subheadings, actionable items          |
+| `h2`        | 1rem    | Medium     | Subheadings, actionable items          |
 | `body`      | 0.875rem| Regular    | Body text, help prompts                |
 | `caption`   | 0.75rem | Light/Reg  | Captions, sub-labels                   |
 

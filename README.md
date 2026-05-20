@@ -6,6 +6,10 @@
 
 <p align="center"><strong>Official Styling, UI Framework, and Interaction Specification</strong></p>
 
+<p align="center">
+  Will Wade &lt;will@aactools.co.uk&gt; &middot; Jen Spatz @ Google
+</p>
+
 ---
 
 ## About This Repository
@@ -73,21 +77,71 @@ The brand color palette is directly extracted from the fixed logo, bringing a vi
 
 ### Brand Colors
 
-| Color Role | Color Name | Hex Code | RGB | Usage |
-| :--- | :--- | :--- | :--- | :--- |
-| **Primary Trim** | Dasher Teal / Mint | `#99D4CD` | 153, 212, 205 | Canvas framing, branding accents, primary buttons. |
-| **Active Field** | Warm Yellow | `#F8E063` | 248, 224, 99 | Zooming boxes, current letter groupings, interactive hover states. |
-| **Alert / Target** | Coral Red | `#EB5B5C` | 235, 91, 92 | Target highlight boxes, path corrections, error strikes, delete states. |
-| **Primary Glyphs** | Deep Navy | `#0F4B75` | 15, 75, 117 | High-contrast text glyphs, labels, top bar iconography. |
+<table>
+  <tr>
+    <td><img src="https://placehold.co/80x40/99D4CD/99D4CD.png" alt="Dasher Teal" /></td>
+    <td><strong>Dasher Teal / Mint</strong></td>
+    <td><code>#99D4CD</code></td>
+    <td>rgb(153, 212, 205)</td>
+    <td>Canvas framing, branding accents, primary buttons.</td>
+  </tr>
+  <tr>
+    <td><img src="https://placehold.co/80x40/F8E063/F8E063.png" alt="Warm Yellow" /></td>
+    <td><strong>Warm Yellow</strong></td>
+    <td><code>#F8E063</code></td>
+    <td>rgb(248, 224, 99)</td>
+    <td>Zooming boxes, current letter groupings, interactive hover states.</td>
+  </tr>
+  <tr>
+    <td><img src="https://placehold.co/80x40/EB5B5C/EB5B5C.png" alt="Coral Red" /></td>
+    <td><strong>Coral Red</strong></td>
+    <td><code>#EB5B5C</code></td>
+    <td>rgb(235, 91, 92)</td>
+    <td>Target highlight boxes, path corrections, error strikes, delete states.</td>
+  </tr>
+  <tr>
+    <td><img src="https://placehold.co/80x40/0F4B75/0F4B75.png" alt="Deep Navy" /></td>
+    <td><strong>Deep Navy</strong></td>
+    <td><code>#0F4B75</code></td>
+    <td>rgb(15, 75, 117)</td>
+    <td>High-contrast text glyphs, labels, top bar iconography.</td>
+  </tr>
+</table>
 
 ### Supporting UI Neutrals
 
-| Role | Light Theme Hex | Dark Theme Hex | Usage |
-| :--- | :--- | :--- | :--- |
-| **Background** | `#F4F7F6` | `#12181B` | App layout background. |
-| **Card / Surface** | `#FFFFFF` | `#1E262B` | Sidebars, textboxes, settings panels. |
-| **Border / Divider** | `#E0E6E8` | `#2A353D` | Structural separations, input borders. |
-| **Subtle Highlight** | `#E9F2F1` | `#1D2D35` | Secondary action highlights. |
+<table>
+  <tr>
+    <th>Role</th>
+    <th>Light Theme</th>
+    <th>Dark Theme</th>
+    <th>Usage</th>
+  </tr>
+  <tr>
+    <td><strong>Background</strong></td>
+    <td><img src="https://placehold.co/80x40/F4F7F6/F4F7F6.png" alt="Light BG" /> <code>#F4F7F6</code></td>
+    <td><img src="https://placehold.co/80x40/12181B/12181B.png" alt="Dark BG" /> <code>#12181B</code></td>
+    <td>App layout background.</td>
+  </tr>
+  <tr>
+    <td><strong>Card / Surface</strong></td>
+    <td><img src="https://placehold.co/80x40/FFFFFF/CCCCCC.png" alt="Light Surface" /> <code>#FFFFFF</code></td>
+    <td><img src="https://placehold.co/80x40/1E262B/1E262B.png" alt="Dark Surface" /> <code>#1E262B</code></td>
+    <td>Sidebars, textboxes, settings panels.</td>
+  </tr>
+  <tr>
+    <td><strong>Border / Divider</strong></td>
+    <td><img src="https://placehold.co/80x40/E0E6E8/E0E6E8.png" alt="Light Border" /> <code>#E0E6E8</code></td>
+    <td><img src="https://placehold.co/80x40/2A353D/2A353D.png" alt="Dark Border" /> <code>#2A353D</code></td>
+    <td>Structural separations, input borders.</td>
+  </tr>
+  <tr>
+    <td><strong>Subtle Highlight</strong></td>
+    <td><img src="https://placehold.co/80x40/E9F2F1/E9F2F1.png" alt="Light Highlight" /> <code>#E9F2F1</code></td>
+    <td><img src="https://placehold.co/80x40/1D2D35/1D2D35.png" alt="Dark Highlight" /> <code>#1D2D35</code></td>
+    <td>Secondary action highlights.</td>
+  </tr>
+</table>
 
 ## 4. Typography
 

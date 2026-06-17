@@ -106,6 +106,11 @@ values to native equivalents. Platform-specific visual deviations (native
 controls, OS conventions) are allowed, but color values, spacing, touch-target
 sizes, and interaction patterns must match the tokens defined here.
 
+This file is the **visual** source of truth. The **behavioural** source of
+truth — which capabilities each platform ships — lives in the cross-platform
+[feature matrix](https://dasher.at/status/); see the
+[developer handbook](https://dasher.at/developers/) for the repo map.
+
 ### Updating This File
 
 This file is the **normative source of truth** for design tokens. When a design
@@ -242,9 +247,17 @@ Material Design standard easing.
 
 ### Settings Modal
 
-Tabbed by usage context: Customization, Punctuation, Volume, Locks,
-Accessibility. Includes a **live mini-canvas preview** so users see changes
-without closing the dialog.
+Tabbed by **usage context**, driven by the `group`/`subgroup` fields in
+DasherCore's `settings_manifest.json` (the normative source — the UI renders
+dynamically from the engine schema). The five top-level tabs are:
+
+**Customization**, **Input**, **Language**, **Output**, **Game Mode**.
+
+Only the subgroups relevant to the active input filter are shown (contextual
+filtering). Includes a **live mini-canvas preview** so users see changes
+without closing the dialog. See the README §7 for the full per-category
+parameter breakdown, and the [feature matrix](https://dasher.at/status/) for
+which settings surfaces each platform currently exposes.
 
 ## Do's and Don'ts
 

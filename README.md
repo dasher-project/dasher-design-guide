@@ -181,6 +181,35 @@ The main application uses a 3-pane responsive layout:
 - **Touch Targets:** Minimum dimension of 48dp x 48dp for all buttons.
 - **Hover Thresholds:** Interactive elements must have a configurable hover-activation delay (dwell clicking) between 200ms and 800ms.
 
+### Iconography
+
+Dasher uses **[Lucide](https://lucide.dev/)** — an open-source (ISC-licensed)
+community icon library — as the single cross-platform icon set for all UI
+chrome. Lucide was chosen for its:
+
+- **Cross-platform parity** — identical icon shapes on every platform, unlike
+  SF Symbols (Apple-only) or Material Symbols (Android/web-only).
+- **Consistent stroke style** — uniform 2px stroke that pairs well with
+  Dasher's heavy-weight typography.
+- **Per-platform packages** — Swift (SPM), Avalonia (NuGet), and a TTF font
+  for GTK/Pango.
+
+| Platform | Package | Integration |
+| --- | --- | --- |
+| Apple | [`lucide-icons-swift`](https://github.com/JakubMazur/lucide-icons-swift) | SPM; SwiftUI `LucideImage(name:)` |
+| Windows | [`Lucide.Avalonia`](https://github.com/lucide-icons/lucide-avalonia) | NuGet; `LucideImage` control |
+| GTK | Lucide TTF font | Load `lucide.ttf` via Pango; render by codepoint |
+
+Icons render at 24px centred in the standard 48px touch target. Stroke colour
+follows the existing palette: Deep Navy (`#00304E`) at rest, Dasher Teal
+(`#35A7C4`) on active/hover.
+
+**Canvas glyphs** (letters inside the zooming Dasher interface) are **not**
+icons — they use the Dasher font system defined in §4.
+
+See [RFC 0002](https://github.com/dasher-project/governance/blob/main/rfcs/0002-lucide-icons.md)
+for the full migration proposal and per-platform implementation plan.
+
 ## 6. Toolbar & Taskbar UX Specification
 
 ### A. Top Toolbar

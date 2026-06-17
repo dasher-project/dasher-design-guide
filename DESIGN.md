@@ -217,6 +217,48 @@ Border radius is used sparingly to maintain a clean, modern aesthetic:
 
 ## Components
 
+### Iconography
+
+Dasher uses **[Lucide](https://lucide.dev/)** as the single cross-platform icon
+set for all UI chrome (toolbar, status bar, sidebar, settings, preferences).
+Lucide is an open-source (ISC-licensed) community icon library with 1,400+
+icons, consistent stroke weight, and per-platform packages.
+
+Canvas glyphs (the letters drawn inside the zooming Dasher interface) are **not**
+icons — they use the Dasher font system (see Typography).
+
+Per-platform integration:
+
+| Platform | Package | Notes |
+| --- | --- | --- |
+| Apple (iOS/macOS/visionOS) | [`lucide-icons-swift`](https://github.com/JakubMazur/lucide-icons-swift) | SPM package; SwiftUI `Image(systemName:)`-style API |
+| Windows (Avalonia) | [`Lucide.Avalonia`](https://github.com/lucide-icons/lucide-avalonia) | NuGet package; `LucideImage` control |
+| GTK (gtkmm) | Lucide TTF font ([`lucide-static-font`](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-static-font)) | Load `lucide.ttf` as a `Pango::FontDescription`; render icon glyphs via codepoints |
+
+Icon size matches the 48px touch-target system: 24px icon centred in a 48px
+button. Stroke colour uses the existing palette — Deep Navy (`#00304E`) on
+light surfaces, Dasher Teal (`#35A7C4`) on active/hover states.
+
+Toolbar icon assignments:
+
+| Action | Lucide name |
+| --- | --- |
+| New (reset) | `file-plus` |
+| Open | `folder-open` |
+| Save | `save` |
+| Play / Pause | `play` / `pause` |
+| Position | `flip-horizontal` |
+| Prefs | `settings` |
+| Copy | `copy` |
+| Copy All | `clipboard-copy` |
+| Paste | `clipboard-paste` |
+| Quick Speak | `volume-2` |
+| Control Mode | `mouse-pointer-click` |
+| Game Mode | `gamepad-2` |
+| Alphabet | `languages` |
+| Speed | `gauge` |
+| Learning | `brain-circuit` |
+
 ### Toolbar (Top)
 
 Fixed 64px bar consolidating macro-actions: New, Open, Save, Play/Pause,

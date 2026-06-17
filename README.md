@@ -42,6 +42,8 @@ Dasher v6.0 is not a single-platform app. Multiple native frontends connect to a
 
 Platform-specific adaptations are expected and allowed — a SwiftUI `Toggle` or a GTK `Switch` will not look identical, and that is fine. What must remain consistent across all platforms are the **color values, typographic scale, spacing, touch-target sizes, and interaction patterns** defined in this guide and codified in DESIGN.md.
 
+> 🧭 This guide is the **visual** source of truth. For the **behavioural** source of truth — which features each platform actually ships — see the cross-platform [feature matrix](https://dasher.at/status/), and the [developer handbook](https://dasher.at/developers/) for how the repos fit together.
+
 ---
 
 ## 1. Introduction & Product Vision

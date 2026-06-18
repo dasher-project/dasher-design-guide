@@ -254,10 +254,13 @@ dynamically from the engine schema). The five top-level tabs are:
 **Customization**, **Input**, **Language**, **Output**, **Game Mode**.
 
 Only the subgroups relevant to the active input filter are shown (contextual
-filtering). Includes a **live mini-canvas preview** so users see changes
-without closing the dialog. See the README §7 for the full per-category
-parameter breakdown, and the [feature matrix](https://dasher.at/status/) for
-which settings surfaces each platform currently exposes.
+filtering). Parameters are tagged with a **tier** (`common` / `advanced` /
+`expert`) enabling progressive disclosure — see
+[RFC 0006](https://github.com/dasher-project/governance/blob/main/rfcs/0006-settings-ia.md).
+Includes a **live mini-canvas preview** so users see changes without closing
+the dialog. See the README §7 for the full per-category parameter breakdown,
+and the [feature matrix](https://dasher.at/status/) for which settings
+surfaces each platform currently exposes.
 
 ## Do's and Don'ts
 

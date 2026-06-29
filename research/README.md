@@ -1,6 +1,6 @@
 # UX Research Sprint — Onboarding & Settings IA
 
-**Status:** planning · **Owner:** UX Working Group (lead: Smartbox UX engineer) · **Horizon:** 8–10 week time-boxed sprint · **Last updated:** 2026-06-29
+**Status:** planning · **Owner:** UX Working Group · **Horizon:** 8–10 week time-boxed sprint · **Last updated:** 2026-06-29
 
 > This is the **operating plan** for the volunteer UX sprint. It is the single
 > source of truth for *who is doing what, when, and how*. It is intentionally
@@ -66,13 +66,23 @@ users. Lock these before research starts (define baseline, then re-measure):
 
 ## People & roles
 
-- **Lead (Smartbox UX engineer)** — research design, ethics/consent, synthesis,
-  AAC-clinic recruitment channel.
-- **Recruit + ops** — social-media call, screening survey, scheduling, consent,
-  recording storage (align with RFC 0001 privacy stance).
-- **Synthesiser** — running insights doc; turns recordings into RFC evidence.
-- **Prototyper** — Figma for static flows; web/WASM (real Dasher in-browser)
-  for interactive zooming tests; native branch when an input method demands it.
+Roles are **functions, not people** — several volunteers will likely want to
+interview and to prototype, so each can have multiple contributors. Sign-ups
+are agreed in the kickoff. All volunteers are contributing in a personal
+capacity, independent of any employer.
+
+- **Research lead (volunteer)** — owns research design, ethics/consent, and
+  synthesis methodology.
+- **Recruit & ops (project lead)** — social-media call, screening survey,
+  scheduling, consent, recording storage (align with RFC 0001 privacy stance).
+  *This is the project lead's responsibility.*
+- **Interviewers / facilitators** (≥1) — run contextual interviews, first-touch
+  think-alouds, and usability rounds.
+- **Synthesisers** (≥1) — running insights doc; turn recordings into RFC
+  evidence.
+- **Prototypers** (≥1) — Figma for static flows; web/WASM (real Dasher
+  in-browser) for interactive zooming tests; native branch when an input method
+  demands it.
 
 Weekly 45-min sync; async channel; hard 8–10 week time-box.
 

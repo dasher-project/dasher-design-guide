@@ -18,14 +18,31 @@ screen, and you guide that point to "write" by moving your pointer (a mouse,
 your finger, your eyes, or a switch). The more likely a letter is, the bigger
 its box — so common words flow quickly.
 
-It was invented ~25 years ago, originally for people who can't easily use a
-keyboard — people living with MND/ALS, cerebral palsy, spinal injury, or who
-communicate via eye-gaze or switches. It's **free and open source**, and it
-runs on Apple, Windows, Linux/GTK, Android, and the web.
+It was invented at Cambridge around 25 years ago by the physicist and science
+communicator **David MacKay** and colleagues. The clever part is that the
+zooming is driven by *probability* — letters that are likely to come next are
+given more room, so the language itself helps you write. It was built
+originally for people who can't easily use a keyboard — people living with
+MND/ALS, cerebral palsy, spinal injury, or who communicate via eye-gaze or
+switches. It's **free and open source**, and runs on Apple, Windows, Linux/GTK,
+Android, and the web.
 
 The magic of Dasher is that once it "clicks", it feels like the letters are
 coming to you. Our job is to get more people to that "click" — because today,
 most don't.
+
+## See Dasher in action
+
+Dasher is much easier to grasp in two minutes of video than in any amount of
+text, so please take a look before we talk:
+
+- **[David MacKay's talk](https://dasher.at/docs/research/presentations/)** — start here. It's the best
+  explanation of how Dasher works and why, given by one of its inventors (the
+  talk at the top of that page).
+- **[User demonstration videos](https://dasher.at/about/#demonstrations)** — real people writing with Dasher
+  using a mouse, their eyes, and switches. This is who we're designing for.
+- **[Dasher's history and purpose](https://dasher.at/about/)** — background for when you'd like to go a
+  little deeper.
 
 ## Why we need you
 

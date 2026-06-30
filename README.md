@@ -18,7 +18,7 @@ This is the **living design guide** for Dasher v6.0. It contains two documents:
 
 - **README.md** (this file) — Human-readable design guidelines, rationale, and interaction specifications. Start here.
 - **[DESIGN.md](DESIGN.md)** — Machine-readable design tokens following the [Google DESIGN.md spec](https://github.com/google/design.md). Use this for automated linting, cross-platform token validation, and as a single source of truth for coding agents.
-- **[research/](research/README.md)** — The operating plan for UX research (onboarding + settings IA sprint), plus personas and findings as they accumulate. Start here for "what UX is being done and why."
+- **[research/](research/)** — UX research for the project. Start with the **[welcome for volunteers](research/README.md)**, then the **[draft sprint plan](research/plan.md)**; personas and findings accumulate here too.
 - **[ux-background/](ux-background/)** — Source decks from prior UX milestones (settings + onboarding, milestone 3). Required reading for new UX contributors.
 
 ### Keeping This Guide Up to Date

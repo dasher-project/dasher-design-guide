@@ -1,155 +1,165 @@
-# UX Research Sprint — Onboarding & Settings IA
+# Welcome, UX volunteer 👋
 
-**Status:** planning · **Owner:** UX Working Group · **Horizon:** 8–10 week time-boxed sprint · **Last updated:** 2026-06-29
+Welcome to Dasher, and thank you for giving your time. This is the document we
+wish every new contributor could read first. It explains **what Dasher is, why
+this matters, and how you can help** — in plain language, no engineering
+background required.
 
-> This is the **operating plan** for the volunteer UX sprint. It is the single
-> source of truth for *who is doing what, when, and how*. It is intentionally
-> **not** an RFC: RFCs are design *decisions* (the output). This document is the
-> research *process* that produces the evidence those decisions need. Findings,
-> personas, and synthesis accumulate as sibling files in this `research/` folder.
+> You're contributing in a personal capacity, independent of any employer.
+> This is a community project and we're glad you're here.
 
-## What this feeds
+---
 
-Two `proposed` RFCs are explicitly blocked on end-user research — this sprint
-unblocks them:
+## What is Dasher?
 
-- **RFC 0004 — First-run onboarding** (every frontend ships none today)
-- **RFC 0006 — Settings IA & progressive disclosure** (108 params; tier split
-  needs empirical validation)
+**Dasher is a different way to type.** Instead of pressing keys, you *steer*
+toward the letter you want: letters sit in boxes that zoom toward a point on
+screen, and you guide that point to "write" by moving your pointer (a mouse,
+your finger, your eyes, or a switch). The more likely a letter is, the bigger
+its box — so common words flow quickly.
 
-When the research is in, those RFCs are revised to `active` with the evidence
-embedded, and engineering implements per platform through the normal RFC
-process. **The C API + `settings_manifest.json` remain the cross-platform
-parity contract** — UX designs must be expressible through them.
+It was invented ~25 years ago, originally for people who can't easily use a
+keyboard — people living with MND/ALS, cerebral palsy, spinal injury, or who
+communicate via eye-gaze or switches. It's **free and open source**, and it
+runs on Apple, Windows, Linux/GTK, Android, and the web.
 
-## Prior work (required reading)
+The magic of Dasher is that once it "clicks", it feels like the letters are
+coming to you. Our job is to get more people to that "click" — because today,
+most don't.
 
-This sprint continues, it does not restart. Read first:
+## Why we need you
 
-- `ux-background/Dasher – settings + onboarding.pdf` — existing IA + onboarding thinking
-- `ux-background/Dasher UX milestone 3.pdf` — milestone 3 research output
-- Design guide `DESIGN.md` §7 (settings) and §8 (onboarding)
-- `governance/rfcs/0004-onboarding.md` and `0006-settings-ia.md`
+The project is in **great shape technically**: a clean, well-tested engine at
+the core, a tidy C API that every frontend shares, and good governance. What's
+left is the human side — the **user experience** — and that's the hard part.
 
-## Scope
+Dasher is powerful, but it has a steep learning curve. New users frequently
+describe the first minute as "sea-sickness inducing", and a lot of people give
+up before they ever get productive. The people who *do* get it tend to be
+either quite tech-literate and persistent, or lucky enough to have an expert
+sit with them. **We want to shorten that gap** so far more people can pick
+Dasher up and benefit from it.
 
-**In:** onboarding (first-run experience) + settings information architecture.
-**Out for this sprint:** themes/appearance (RFC 0007 shipped), input-method
-redesign, multilingual UI (RFC 0003). Input method enters only *indirectly*,
-via persona-branched onboarding.
+That's a UX problem, not an engineering one — which is why your help is
+genuinely valuable. There are real users, a real product, and a real chance to
+make communication easier for people who need it. It's meaningful work, and
+it's fun: Dasher is a strange, elegant idea, and you'll be helping shape how
+people first meet it.
 
-## Guiding principle: research-led, not solution-led
+## What this effort is about
 
-We do **not** pre-commit to a mechanism. Specifically:
+A focused, time-boxed sprint (8–10 weeks) on two things, both of which users
+have told us hurt:
 
-- The current **Game Mode is a hypothesis** for the practice vehicle, not an
-  assumption — research may propose something better.
-- A **passive "watch how it works" step is a research question**, not a given.
-  If one is needed, it's a fresh build or a video clip — `CDemoFilter` was
-  removed (`f79eb6a9`) and is **not** to be resurrected.
+1. **The very first experience** — what happens the moment someone opens Dasher
+   for the first time. Right now: nothing. No welcome, no "here's how it
+   works", no practice. You're dropped straight into the live tool.
+2. **The settings** — Dasher has over a hundred settings. For experts that's
+   power; for newcomers it's overwhelming. We need to work out what people
+   actually need to see and when.
 
-Engineering choices follow the evidence; they don't lead it.
+## The one rule: we don't know the answers yet
 
-## Goals & success metrics
+We have **hunches** — for example, "maybe a short practice mode would help
+people get the feel", or "maybe a quick 'watch how this works' moment would
+orient them". But nothing is decided, and history tells us our hunches are
+often wrong.
 
-"Shorten the gap" means measurably reducing the learning curve for brand-new
-users. Lock these before research starts (define baseline, then re-measure):
+So this is **research, not validation**. Your job is to help us discover what
+actually works for real users. We might end up building something none of us
+have on the list today. If your research overturns our assumptions, that's a
+win — please say so loudly.
 
-| Metric | What it tells us |
-| --- | --- |
-| Time to first correct sentence (novice) | Core first-touch friction |
-| Game/practice completion rate, session 1 | Whether the practice loop works |
-| Onboarding abandonment % **per step** | The step is the diagnosis |
-| % who find a target setting unaided | Settings IA works |
-| Params changed by novices | Fewer = better defaults |
-| **Retention day 1 / day 7** | The real "did we close the gap" number (needs RFC 0001 analytics) |
+(Note for the curious: there *used* to be an automated "demo mode" in the
+engine. It was removed because it crashed. We might build something like it
+again, done properly — or we might find a better idea. That decision follows
+the research, not the other way around. Don't worry about the internals.)
 
-## People & roles
+## Who we need to talk to
 
-Roles are **functions, not people** — several volunteers will likely want to
-interview and to prototype, so each can have multiple contributors. Sign-ups
-are agreed in the kickoff. All volunteers are contributing in a personal
-capacity, independent of any employer.
+**Both brand-new users and experienced ones** — because they answer different
+questions, and we need both.
 
-- **Research lead (volunteer)** — owns research design, ethics/consent, and
-  synthesis methodology.
-- **Recruit & ops (project lead)** — social-media call, screening survey,
-  scheduling, consent, recording storage (align with RFC 0001 privacy stance).
-  *This is the project lead's responsibility.*
-- **Interviewers / facilitators** (≥1) — run contextual interviews, first-touch
-  think-alouds, and usability rounds.
-- **Synthesisers** (≥1) — running insights doc; turn recordings into RFC
-  evidence.
-- **Prototypers** (≥1) — Figma for static flows; web/WASM (real Dasher
-  in-browser) for interactive zooming tests; native branch when an input method
-  demands it.
+- **Brand-new users** tell us about the *first-touch* struggle — where people
+  stall, what confuses them, what makes them give up. Existing users can't
+  answer this well: they got over the hump long ago and have forgotten what was
+  hard. We'll recruit newcomers via social media, and also try to reach people
+  who are newer to technology through AAC communities, clinics, and device
+  makers (so we don't only hear from the tech-savvy).
+- **Experienced users** tell us what seasoned users value, where the settings
+  hurt in daily use, and what "good" looks like once you're fluent.
 
-Weekly 45-min sync; async channel; hard 8–10 week time-box.
+We also want to cover the different **ways people use Dasher** — mouse, touch,
+eye-gaze, and switch — because each is a different experience with different
+needs.
 
-## Recruitment — two cohorts, do not mix
+## What does "success" look like?
 
-**Existing users cannot answer the onboarding question** — they survived the
-learning curve years ago. Segment strictly:
+Honestly: **we're not sure yet, and figuring that out is part of the work.**
+The top-line goal is clear — *more people get productive with Dasher, faster,
+and stick with it* — but the specific things we measure need to be defined, and
+that definition should come from listening to both new and existing users.
 
-- **Novices (brand-new, never used Dasher)** — for onboarding. Recruited via
-  **social media**. Screen for tech-literacy (social respondents self-select
-  for it — a known bias); deliberately also recruit lower-tech-literacy users
-  via AAC clinics / OTs and switch/eye-gaze device vendors.
-- **Existing users (3–4 active panel + wider group)** — for settings IA,
-  themes-adjacent, and rapid evaluative rounds.
+Some candidate measures we might settle on (not decisions, just starters):
 
-Personas to cover across both: **mouse / switch / eye-gaze / touch** — they
-need different onboarding and different settings defaults.
+- How long until a new user writes their first sentence?
+- How many complete a first practice session vs. give up halfway?
+- Do people come back the next day? The next week? *(This is probably the
+  truest sign we've closed the gap.)*
+- Can people find a setting they're looking for without help?
 
-## Methods, per workstream
+We'll agree the final list together early in the sprint.
 
-- **Settings IA** — async **card sort** (~15–20 from the wider group): users
-  group the 108 params themselves, so the basic/advanced/expert split is
-  *empirically derived*, not ratifying a maintainer guess. Validate with
-  tree-tests ("find 'make Dasher slower'"). Existing-user panel for iteration.
-- **Onboarding** — **first-touch think-alouds** with 5 novices on the web/WASM
-  build (send a link, screen-share, zero install). The web/WASM build is the
-  key enabler for remote novice testing. Switch/eye-gaze persona validation
-  happens on native builds with real devices.
+## How we'll work together
 
-Sample sizes are deliberately small-N (5 per usability round, Nielsen) run
-frequently — not large-N run once.
+Roles here are **things to do, not titles for one person** — several of you
+will want to run interviews, and several will want to prototype, and that's
+great. We sort out who does what in the kickoff.
 
-## Timeline
+- **Research lead (volunteer)** — shapes the research approach, consent, and how
+  we turn findings into evidence.
+- **Recruit & ops (project lead)** — I handle recruitment calls, screening,
+  scheduling, consent, and storing recordings safely and privately.
+- **Interviewers / facilitators** — talk to users, run the studies.
+- **Synthesis** — turn recordings and notes into clear findings.
+- **Prototyping** — sketch ideas in Figma; build clickable things; for the
+  parts where the *feel* of Dasher matters, we can put a real Dasher in a web
+  browser so anyone can try a prototype with a link.
 
-| Weeks | Phase | Output |
-| --- | --- | --- |
-| 1 | Align | Team has read prior work; personas + screening survey drafted; metrics baselined |
-| 2–5 | Understand | 5–8 existing-user interviews; 5 novice first-touch studies; settings card sort. Synthesis: personas + journey maps + prioritised problems |
-| 6–8 | Design + iterate | Two parallel workstreams (onboarding; settings IA). 2 usability rounds each (5 users/round) |
-| 9 | Hand off | Revised RFCs 0004 + 0006 → `active`; personas added to design guide; engineering picks up via RFC |
+We meet once a week for ~45 minutes, chat async in between, and keep this to a
+focused 8–10 weeks so the commitment is finite.
 
-## Prototyping
+Rough shape of the weeks: **align** (we get on the same page) → **listen**
+(interviews and first-touch studies with both cohorts; a settings exercise
+where users show us how they'd group the options) → **design and test**
+(sketch, prototype, test with real people, repeat) → **hand off** (write up
+what we learned and what to build).
 
-- **Figma** — static flows (settings layout, onboarding screen sequence).
-- **Web/WASM** (`dasher-web`) — interactive, where the *feel* of zooming is the
-  thing under test. Send novices a link.
-- **Native branch** (Windows/Apple/GTK) — only when an input method (switch,
-  eye-gaze) requires the real device stack.
+## Where to start
 
-## Deliverables → where they land
+This is a **continuation**, not a restart — there's already UX thinking to
+build on. Good first reads:
 
-- **Personas, journey maps, findings** → this `research/` folder.
-- **Validated settings IA** → RFC 0006 detailed design.
-- **Validated onboarding mechanism** → RFC 0004 detailed design (may be unlike
-  anything currently on the list — that's the point).
-- **Cross-platform parity** preserved by routing every design through an RFC
-  that maintainers review.
+- **[plan.md](plan.md)** — the draft plan for how we'll go about this work
+  (phases, methods, who we'll talk to). Written in plain language, and very
+  much open to your input.
+- `ux-background/Dasher – settings + onboarding.pdf` — earlier thinking on
+  these exact two problems.
+- `ux-background/Dasher UX milestone 3.pdf` — research from a previous
+  milestone.
+- The main design guide (`README.md`) — the project's visual and interaction
+  reference.
 
-## Operating rules
+If you want to go deeper into the engineering side later, the changes this work
+will inform are tracked as RFC proposals (`governance/rfcs/0004-onboarding.md`
+and `0006-settings-ia.md`). Don't worry if "RFC" means nothing to you right now
+— it's just how the project agrees on changes across all its platforms, and
+we'll walk you through it when it matters.
 
-- One finding doc per study, committed here.
-- No design lands in a frontend without an accepted RFC (prevents one-platform
-  drift).
-- If research overturns a current assumption (e.g. "don't use Game Mode"), say
-  so explicitly in the RFC revision — that's a success, not a failure.
+## A last word
 
-## How to update this file
+You're joining at the moment Dasher most needs UX help. The foundations are
+solid; what's missing is the bridge between a brilliant idea and the people who
+could benefit from it. That bridge is what we're building together.
 
-This is a living plan. Edit it as scope/roles/timeline shift; date-stamp the
-top. Major scope changes go through a governance note, not silently.
+Welcome aboard. 🎉

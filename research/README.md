@@ -155,8 +155,6 @@ that's great. We sort out who does what in the kickoff.
 
 - **Research lead (volunteer)** — shapes the research approach, consent, and how
   we turn findings into evidence.
-- **Recruit & ops (project lead)** — I handle recruitment calls, screening,
-  scheduling, consent, and storing recordings safely and privately.
 - **Interviewers / facilitators** — talk to users, run the studies.
 - **Synthesis** — turn recordings and notes into clear findings.
 - **Prototyping** — sketch ideas in Figma; build clickable things; for the

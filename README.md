@@ -48,6 +48,16 @@ Platform-specific adaptations are expected and allowed — a SwiftUI `Toggle` or
 
 ---
 
+## Get Involved
+
+We're running a focused UX sprint with volunteers and end users. If you'd like to help with research, design, or prototyping:
+
+- **[research/README.md](research/README.md)** — volunteer welcome and overview
+- **[research/plan.md](research/plan.md)** — the sprint plan (squads, cadence, RFC workflow)
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — how to contribute (design tokens, RFCs, code)
+
+---
+
 ## 1. Introduction & Product Vision
 
 Dasher is a predictive, continuous-gesture text-entry system driven by zooming mechanics. Originally built as an accessibility aid for users with severe motor restrictions (utilizing eye-gaze, head-trackers, sip-and-puff devices, or joysticks), **Dasher v6.0** represents a complete cross-platform modernization.

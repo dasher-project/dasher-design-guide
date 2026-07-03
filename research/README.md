@@ -65,7 +65,7 @@ people first meet it.
 
 ## What this effort is about
 
-A focused, time-boxed sprint (8–10 weeks) on two things, both of which users
+A focused, time-boxed sprint (8–10 weeks) on three things, all of which users
 have told us hurt:
 
 1. **The very first experience** — what happens the moment someone opens Dasher
@@ -74,6 +74,9 @@ have told us hurt:
 2. **The settings** — Dasher has over a hundred settings. For experts that's
    power; for newcomers it's overwhelming. We need to work out what people
    actually need to see and when.
+3. **Training and gamification** — even once the idea clicks, building speed
+   takes practice. We want to explore game-like training modes that make
+   practice engaging and accessible for eye-gaze, switch, and touch users.
 
 ## The one rule: we don't know the answers yet
 
@@ -129,9 +132,26 @@ We'll agree the final list together early in the sprint.
 
 ## How we'll work together
 
-Roles here are **things to do, not titles for one person** — several of you
-will want to run interviews, and several will want to prototype, and that's
-great. We sort out who does what in the kickoff.
+We organise into **three squads**, each owning one problem area:
+
+- **Squad A — Onboarding & First-Time Experience.** Design a seamless tutorial
+  and setup process that makes the first five minutes of using Dasher
+  effortless.
+- **Squad B — Settings & Configuration Architecture.** Simplify and group
+  Dasher's extensive engine settings so users can easily customise their
+  experience without getting lost.
+- **Squad C — Gamification & Training Mode.** Design structured, engaging
+  training exercises/games to help users build typing speed and accuracy —
+  working closely with Squad A so training bridges naturally from onboarding.
+
+**Each squad has an embedded end user** — an active Dasher user who's there
+throughout the sprint, not just at test time. They take part in your research,
+test your wireframes, and give you immediate, real-world feedback. Their voice
+carries weight when it comes to settling on recommendations.
+
+Roles within a squad are **things to do, not titles for one person** — several
+of you will want to run interviews, and several will want to prototype, and
+that's great. We sort out who does what in the kickoff.
 
 - **Research lead (volunteer)** — shapes the research approach, consent, and how
   we turn findings into evidence.
@@ -143,14 +163,39 @@ great. We sort out who does what in the kickoff.
   parts where the *feel* of Dasher matters, we can put a real Dasher in a web
   browser so anyone can try a prototype with a link.
 
-We meet once a week for ~45 minutes, chat async in between, and keep this to a
-focused 8–10 weeks so the commitment is finite.
+### The cadence
 
-Rough shape of the weeks: **align** (we get on the same page) → **listen**
-(interviews and first-touch studies with both cohorts; a settings exercise
-where users show us how they'd group the options) → **design and test**
-(sketch, prototype, test with real people, repeat) → **hand off** (write up
-what we learned and what to build).
+We respect your time as volunteers. We operate on a **bi-weekly Tuesday**
+cycle:
+
+- **Every other Tuesday:** All-hands sync, 1 hour. General updates, squad
+  show-and-tells (10 minutes each), cross-squad coordination.
+- **Off-Tuesdays:** Your squad runs its own brief check-in with your embedded
+  end user. You manage your own tasks — the maintainer doesn't attend unless
+  asked.
+
+### Where things live
+
+- **[Shared Google Drive](https://drive.google.com/)** — research tracker
+  spreadsheet, user research interview log, working docs. (You'll get access
+  in the kickoff.)
+- **`research/` folder (this repo)** — the plan, write-ups, and final RFCs.
+- **`ux-background/`** — earlier UX thinking to build on.
+
+### How decisions become RFCs
+
+Each squad's research and prototyping leads to an **RFC** — a short written
+proposal that the project agrees on before anyone builds it. You either settle
+on a draft RFC that already exists (updating it with what you learned) or
+propose a new direction. The embedded end user is part of that settlement.
+Once the squad agrees, the RFC comes to the whole group for final sign-off.
+(See the [plan](plan.md) for the full process.)
+
+We keep this to a focused 8–10 weeks so the commitment is finite. Rough shape
+of the weeks: **align** (1-on-1s and squad assembly) → **listen** (interviews,
+first-touch studies, settings card-sorting) → **design and test** (sketch,
+prototype, settle on RFCs) → **hand off** (group agreement and handover to
+engineering).
 
 ## Where to start
 
@@ -169,9 +214,10 @@ build on. Good first reads:
 
 If you want to go deeper into the engineering side later, the changes this work
 will inform are tracked as RFC proposals (`governance/rfcs/0004-onboarding.md`
-and `0006-settings-ia.md`). Don't worry if "RFC" means nothing to you right now
-— it's just how the project agrees on changes across all its platforms, and
-we'll walk you through it when it matters.
+and `0006-settings-ia.md`). Squad C (gamification) may open a new RFC or fold
+into the onboarding one — that's a decision for the squad. Don't worry if "RFC"
+means nothing to you right now — it's just how the project agrees on changes
+across all its platforms, and we'll walk you through it when it matters.
 
 ## A last word
 
